@@ -23,7 +23,8 @@ class cfs_algn_coverage extends uvm_component implements uvm_ext_reset_handler;
     }
 
     ctrl_size: coverpoint info.ctrl_size {
-      option.comment = "Value of CTRL.SIZE"; bins values[] = {[5 : 10]};
+      //option.comment = "Value of CTRL.SIZE"; bins values[] = {[5:10]};    
+      option.comment = "Value of CTRL.SIZE"; bins values[] = {1,2,4};    //size as to be 1 or 2 or 4
       ignore_bins i_size={7};
     }
 

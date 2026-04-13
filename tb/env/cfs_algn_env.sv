@@ -143,8 +143,8 @@ class cfs_algn_env#(int unsigned ALGN_DATA_WIDTH = 32) extends uvm_env implement
       end
       
       virtual_sequencer.apb_sequencer   = apb_agent.sequencer;
-      virtual_sequencer.md_rx_sequencer = cfs_md_sequencer_base_master'(md_rx_agent.sequencer);
-      virtual_sequencer.md_tx_sequencer = cfs_md_sequencer_base_slave'(md_tx_agent.sequencer);
+      virtual_sequencer.md_rx_sequencer = cfs_md_sequencer_base_master'(md_rx_agent.sequencer);  //it was tx
+      virtual_sequencer.md_tx_sequencer = cfs_md_sequencer_base_slave'(md_tx_agent.sequencer);   //it was rx
       virtual_sequencer.model           = model;
     endfunction 
     

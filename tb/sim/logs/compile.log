@@ -1,10 +1,5 @@
-make[1]: Entering directory '/home/muthub/Downloads/aligner_Muttu/tb/sim'
-[Compiling...]
-QuestaSim-64 vmap 2021.2_1 Lib Mapping Utility 2021.05 May 15 2021
-vmap work work 
-Modifying modelsim.ini
 QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
-Start time: 10:42:48 on Apr 03,2026
+Start time: 06:35:27 on Apr 13,2026
 vlog -sv -cover bcest -work work ../../rtl/design.sv ../top/testbench.sv "+acc" "+define+QUESTA" "+incdir+../../rtl" "+incdir+../top" 
 -- Compiling module cfs_synch
 -- Compiling module cfs_synch_fifo
@@ -36,6 +31,6 @@ vlog -sv -cover bcest -work work ../../rtl/design.sv ../top/testbench.sv "+acc" 
 
 Top level modules:
 	testbench
-End time: 10:42:48 on Apr 03,2026, Elapsed time: 0:00:00
+End time: 06:35:28 on Apr 13,2026, Elapsed time: 0:00:01
 Errors: 0, Warnings: 0
-make[1]: Leaving directory '/home/muthub/Downloads/aligner_Muttu/tb/sim'
+make[1]: Leaving directory '/home/muthub/Downloads/Aligner_Muttu_cpy/tb/sim'

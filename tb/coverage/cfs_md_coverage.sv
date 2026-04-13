@@ -34,6 +34,8 @@ class cfs_md_coverage #(
 
     size: coverpoint item.data.size() {
       option.comment = "Size of the MD access"; bins values[] = {[1 : (DATA_WIDTH / 8)]};
+      //added
+      illegal_bins illegal_size = {3};
     }
 
     response: coverpoint item.response {option.comment = "Response of the MD access";}
@@ -45,6 +47,8 @@ class cfs_md_coverage #(
       bins length_gt_10 = {[11 : $]};
 
       illegal_bins length_lt_1 = {0};
+      //added
+ //     ignore_bins length_le_10 = {0,1};
     }
 
     prev_item_delay: coverpoint item.prev_item_delay {

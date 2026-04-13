@@ -52,7 +52,7 @@ class cfs_algn_apb_tests_3_1_1 extends cfs_algn_test_base;
 
     // Step 3: Send 250 illegal RX packets
     // ----- so DUT should detect error and increment the drop counter----
-    for (int i = 0; i < 250; i++) begin
+    for (int i = 0; i < 260; i++) begin
       rx_err_seq1 =
       cfs_algn_virtual_sequence_rx_err::type_id::create($sformatf("rx_err_seq1_%0d", i));
       rx_err_seq1.set_sequencer(env.virtual_sequencer);

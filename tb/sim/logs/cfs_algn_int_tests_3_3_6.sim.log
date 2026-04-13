@@ -1,0 +1,285 @@
+# ** Error (suppressible): (vsim-7031) Bad value ("RANDOM") specified for Sv_Seed interpreted as 0.
+# vsim -coverage -c work.testbench "+UVM_TESTNAME=cfs_algn_int_tests_3_3_6" "+UVM_MAX_QUIT_COUNT=20" "+access+rw" -f messages.f -sv_seed RANDOM "+cover" "+UVM_COVERAGE=ALL" -do "do ../../tb/sim/toggle_exclude.do; coverage save -onexit ucdb/cfs_algn_int_tests_3_3_6.ucdb; run -all; quit -f;" -l logs/cfs_algn_int_tests_3_3_6.sim.log 
+# Start time: 06:36:30 on Apr 13,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Sim-64
+# //  Version 2021.2_1 linux_x86_64 May 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.cfs_algn_if(fast)
+# Loading work.cfs_apb_if(fast)
+# Loading work.cfs_md_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.cfs_algn_reg_pkg(fast)
+# Loading work.uvm_ext_pkg(fast)
+# Loading work.cfs_md_pkg(fast)
+# Loading work.cfs_apb_pkg(fast)
+# Loading work.cfs_algn_pkg(fast)
+# Loading work.cfs_algn_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.cfs_apb_if(fast__2)
+# Loading work.cfs_md_if(fast__2)
+# Loading work.cfs_algn_if(fast__2)
+# Loading work.cfs_aligner(fast)
+# Loading work.cfs_aligner_core(fast)
+# Loading work.cfs_rx_ctrl(fast)
+# Loading work.cfs_synch(fast)
+# Loading work.cfs_synch_fifo(fast)
+# Loading work.cfs_tx_ctrl(fast)
+# Loading work.cfs_ctrl(fast)
+# Loading work.cfs_regs(fast)
+# Loading work.cfs_edge_detect(fast)
+# Loading work.cfs_edge_detect(fast__1)
+# Loading /home/muthub/Downloads/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# do ../../tb/sim/toggle_exclude.do
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+# coverage exclude -scope /testbench/dut/core/tx_fifo -srcfile ../../rtl/cfs_synch_fifo.v -linerange 132 -code c -comment {Waiving uncovered condition at line 128 (tx_fifo)}
+# ** UI-Msg: (vsim-4036) The 'coverage exclude' command had no effect on some/all objects because
+# no matching coverage data was found.
+# 
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+# coverage exclude -scope /testbench/dut/core/tx_fifo -srcfile ../../rtl/cfs_synch_fifo.v -linerange 156 -code c -comment {Waiving uncovered condition at line 154 (tx_fifo)}
+# ** UI-Msg: (vsim-4036) The 'coverage exclude' command had no effect on some/all objects because
+# no matching coverage data was found.
+# 
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+# coverage exclude -scope /testbench/dut/core/rx_fifo -srcfile ../../rtl/cfs_synch_fifo.v -linerange 132 -code c -comment {Waiving uncovered condition at line 128 (rx_fifo)}
+# ** UI-Msg: (vsim-4036) The 'coverage exclude' command had no effect on some/all objects because
+# no matching coverage data was found.
+# 
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+# coverage exclude -scope /testbench/dut/core/rx_ctrl -srcfile ../../rtl/cfs_rx_ctrl.v -linerange 76 -code c -comment {Waiving uncovered condition at line 128 (rx_fifo)}
+# ** UI-Msg: (vsim-4036) The 'coverage exclude' command had no effect on some/all objects because
+# no matching coverage data was found.
+# 
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+#  coverage save -onexit ucdb/cfs_algn_int_tests_3_3_6.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test cfs_algn_int_tests_3_3_6...
+# UVM_INFO @ 0: reporter [MAXQUITSET] '+UVM_MAX_QUIT_COUNT=20' provided on the command line is being applied.
+# ** Warning: (vsim-8556) On evaluating the expression 'binsof(ctrl_size) intersect{ value_list }' inside the select expression of Bin 'ignore_ctrl' of Cross 'all' in Covergroup instance '\/cfs_algn_pkg::cfs_algn_coverage::cover_split ', no matching bins were found. The binsof expression will result in an empty set.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'length_eq_2' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[1]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[2]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[3]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[4]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[5]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[6]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[7]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'length_gt_10' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-12051) Illegal assignment in cast to class work.cfs_md_pkg::cfs_md_sequencer_base_master from class work.uvm_ext_pkg::uvm_ext_sequencer #(class work.cfs_md_pkg::cfs_md_item_drv_master)
+#    Time: 0 ns  Iteration: 32  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefe44bd05 File: ../env/cfs_algn_env.sv Line: 146
+# ** Warning: (vsim-12051) Illegal assignment in cast to class work.cfs_md_pkg::cfs_md_sequencer_base_slave from class work.uvm_ext_pkg::uvm_ext_sequencer #(class work.cfs_md_pkg::cfs_md_item_drv_slave)
+#    Time: 0 ns  Iteration: 32  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefe44bd05 File: ../env/cfs_algn_env.sv Line: 147
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------------------
+# Name                          Type                                   Size  Value
+# --------------------------------------------------------------------------------
+# uvm_test_top                  cfs_algn_int_tests_3_3_6               -     @487 
+#   env                         uvm_env                                -     @494 
+#     agent_config              uvm_component                          -     @522 
+#     apb_agent                 cfs_apb_agent                          -     @508 
+#       agent_config            cfs_apb_agent_config                   -     @870 
+#       coverage                cfs_apb_coverage                       -     @892 
+#         port_item             uvm_analysis_imp_item                  -     @899 
+#         wrap_cover_addr_0     uvm_component                          -     @1039
+#         wrap_cover_addr_1     uvm_component                          -     @1046
+#         wrap_cover_rd_data_0  uvm_component                          -     @1067
+#         wrap_cover_rd_data_1  uvm_component                          -     @1074
+#         wrap_cover_wr_data_0  uvm_component                          -     @1053
+#         wrap_cover_wr_data_1  uvm_component                          -     @1060
+#       driver                  cfs_apb_driver                         -     @907 
+#         rsp_port              uvm_analysis_port                      -     @922 
+#         seq_item_port         uvm_seq_item_pull_port                 -     @914 
+#       monitor                 cfs_apb_monitor                        -     @877 
+#         output_port           uvm_analysis_port                      -     @884 
+#       sequencer               uvm_sequencer                          -     @930 
+#         rsp_export            uvm_analysis_export                    -     @937 
+#         seq_item_export       uvm_seq_item_pull_imp                  -     @1031
+#         arbitration_queue     array                                  0     -    
+#         lock_queue            array                                  0     -    
+#         num_last_reqs         integral                               32    'd1  
+#         num_last_rsps         integral                               32    'd1  
+#     coverage                  cfs_algn_coverage                      -     @744 
+#       port_in_split_info      uvm_analysis_imp_in_split_info         -     @751 
+#     env_config                cfs_algn_env_config                    -     @501 
+#     md_rx_agent               uvm_agent                              -     @515 
+#       agent_config            uvm_component                          -     @1088
+#       coverage                uvm_component                          -     @1110
+#         port_item             uvm_analysis_imp_item                  -     @1117
+#         wrap_cover_data_0     uvm_component                          -     @1257
+#         wrap_cover_data_1     uvm_component                          -     @1264
+#       driver                  uvm_driver #(REQ,RSP)                  -     @1125
+#         rsp_port              uvm_analysis_port                      -     @1140
+#         seq_item_port         uvm_seq_item_pull_port                 -     @1132
+#       monitor                 uvm_monitor                            -     @1095
+#         output_port           uvm_analysis_port                      -     @1102
+#       sequencer               cfs_md_sequencer_base_master           -     @1148
+#         rsp_export            uvm_analysis_export                    -     @1155
+#         seq_item_export       uvm_seq_item_pull_imp                  -     @1249
+#         arbitration_queue     array                                  0     -    
+#         lock_queue            array                                  0     -    
+#         num_last_reqs         integral                               32    'd1  
+#         num_last_rsps         integral                               32    'd1  
+#     md_tx_agent               uvm_agent                              -     @533 
+#       coverage                uvm_component                          -     @1293
+#         port_item             uvm_analysis_imp_item                  -     @1300
+#         wrap_cover_data_0     uvm_component                          -     @1487
+#         wrap_cover_data_1     uvm_component                          -     @1494
+#       driver                  uvm_driver #(REQ,RSP)                  -     @1308
+#         rsp_port              uvm_analysis_port                      -     @1323
+#         seq_item_port         uvm_seq_item_pull_port                 -     @1315
+#       monitor                 uvm_monitor                            -     @1278
+#         output_port           uvm_analysis_port                      -     @1285
+#       sequencer               cfs_md_sequencer_base_slave            -     @1331
+#         pending_items         uvm_tlm_fifo #(T)                      -     @1448
+#           get_ap              uvm_analysis_port                      -     @1479
+#           get_peek_export     uvm_get_peek_imp                       -     @1463
+#           put_ap              uvm_analysis_port                      -     @1471
+#           put_export          uvm_put_imp                            -     @1455
+#         port_from_mon         uvm_analysis_imp                       -     @1440
+#         rsp_export            uvm_analysis_export                    -     @1338
+#         seq_item_export       uvm_seq_item_pull_imp                  -     @1432
+#         arbitration_queue     array                                  0     -    
+#         lock_queue            array                                  0     -    
+#         num_last_reqs         integral                               32    'd1  
+#         num_last_rsps         integral                               32    'd1  
+#     model                     cfs_algn_model                         -     @540 
+#       port_in_rx              uvm_analysis_imp_in_rx                 -     @547 
+#       port_in_tx              uvm_analysis_imp_in_tx                 -     @555 
+#       port_out_irq            uvm_analysis_port                      -     @579 
+#       port_out_rx             uvm_analysis_port                      -     @563 
+#       port_out_split_info     uvm_analysis_port                      -     @587 
+#       port_out_tx             uvm_analysis_port                      -     @571 
+#       rx_fifo                 uvm_tlm_fifo #(T)                      -     @595 
+#         get_ap                uvm_analysis_port                      -     @626 
+#         get_peek_export       uvm_get_peek_imp                       -     @610 
+#         put_ap                uvm_analysis_port                      -     @618 
+#         put_export            uvm_put_imp                            -     @602 
+#       tx_fifo                 uvm_tlm_fifo #(T)                      -     @634 
+#         get_ap                uvm_analysis_port                      -     @665 
+#         get_peek_export       uvm_get_peek_imp                       -     @649 
+#         put_ap                uvm_analysis_port                      -     @657 
+#         put_export            uvm_put_imp                            -     @641 
+#     predictor                 uvm_reg_predictor #(cfs_apb_item_mon)  -     @674 
+#       bus_in                  uvm_analysis_imp                       -     @681 
+#       reg_ap                  uvm_analysis_port                      -     @689 
+#     scoreboard                cfs_algn_scoreboard                    -     @697 
+#       port_in_agent_rx        uvm_analysis_imp_in_agent_rx           -     @728 
+#       port_in_agent_tx        uvm_analysis_imp_in_agent_tx           -     @736 
+#       port_in_model_irq       uvm_analysis_imp_in_model_irq          -     @720 
+#       port_in_model_rx        uvm_analysis_imp_in_model_rx           -     @704 
+#       port_in_model_tx        uvm_analysis_imp_in_model_tx           -     @712 
+#     virtual_sequencer         cfs_algn_virtual_sequencer             -     @759 
+#       rsp_export              uvm_analysis_export                    -     @766 
+#       seq_item_export         uvm_seq_item_pull_imp                  -     @860 
+#       arbitration_queue       array                                  0     -    
+#       lock_queue              array                                  0     -    
+#       num_last_reqs           integral                               32    'd1  
+#       num_last_rsps           integral                               32    'd1  
+# --------------------------------------------------------------------------------
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 165: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.IRQEN: value='h13 : updated value = 'h13
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 195: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.CTRL: value='h2 : updated value = 'h2
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 235: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.IRQ: value='hd : updated value = 'h0
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 315: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.CTRL: value='h2 : updated value = 'h2
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 355: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [346..] data: {'ha5}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 31
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 355: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [346..355] data: {'ha5}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 31
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 365: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [346..355] data: {'ha5}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 31
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 365: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 1
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 385: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [376..] data: {'h89}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 2
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 385: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [376..385] data: {'h89}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 2
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 395: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [376..385] data: {'h89}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 2
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 395: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 395: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 1
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 405: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [346..385] data: {'ha5, 'h89}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 415: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [406..] data: {'h25}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 2
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 415: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [406..415] data: {'h25}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 2
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 415: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=89a5
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 425: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [406..415] data: {'h25}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 2
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 425: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [346..385] data: {'ha5, 'h89}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 425: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [406..425] data: {'ha5, 'h89}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 37
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 425: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 1
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 425: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 445: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [436..] data: {'hc1}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 2
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 445: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [436..445] data: {'hc1}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 2
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 455: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [436..445] data: {'hc1}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 2
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 455: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 455: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 1
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 465: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [406..445] data: {'h25, 'hc1}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 475: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=c125
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 485: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [406..445] data: {'h25, 'hc1}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 485: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [466..485] data: {'h25, 'hc1}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 4
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 485: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1255: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# Quit count :     0 of    20
+# ** Report counts by severity
+# UVM_INFO :   38
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [DEBUG]     4
+# [DEBUG1]     2
+# [HANDSHAKE]     2
+# [ITEM_END]     6
+# [MAXQUITSET]     1
+# [Questa UVM]     2
+# [REG_PREDICT]     4
+# [RNTST]     1
+# [RX_FIFO]     8
+# [TEST_DONE]     1
+# [TX_FIFO]     6
+# [UVMTOP]     1
+# ** Note: $finish    : /home/muthub/Downloads/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1255 ns  Iteration: 54  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 06:36:38 on Apr 13,2026, Elapsed time: 0:00:08
+# Errors: 1, Warnings: 17

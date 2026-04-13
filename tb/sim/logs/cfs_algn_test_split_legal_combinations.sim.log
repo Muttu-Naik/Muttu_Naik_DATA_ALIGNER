@@ -1,0 +1,841 @@
+# ** Error (suppressible): (vsim-7031) Bad value ("RANDOM") specified for Sv_Seed interpreted as 0.
+# vsim -coverage -c work.testbench "+UVM_TESTNAME=cfs_algn_test_split_legal_combinations" "+UVM_MAX_QUIT_COUNT=20" "+access+rw" -f messages.f -sv_seed RANDOM "+cover" "+UVM_COVERAGE=ALL" -do "do ../../tb/sim/toggle_exclude.do; coverage save -onexit ucdb/cfs_algn_test_split_legal_combinations.ucdb; run -all; quit -f;" -l logs/cfs_algn_test_split_legal_combinations.sim.log 
+# Start time: 06:37:28 on Apr 13,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Sim-64
+# //  Version 2021.2_1 linux_x86_64 May 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.cfs_algn_if(fast)
+# Loading work.cfs_apb_if(fast)
+# Loading work.cfs_md_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.cfs_algn_reg_pkg(fast)
+# Loading work.uvm_ext_pkg(fast)
+# Loading work.cfs_md_pkg(fast)
+# Loading work.cfs_apb_pkg(fast)
+# Loading work.cfs_algn_pkg(fast)
+# Loading work.cfs_algn_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.cfs_apb_if(fast__2)
+# Loading work.cfs_md_if(fast__2)
+# Loading work.cfs_algn_if(fast__2)
+# Loading work.cfs_aligner(fast)
+# Loading work.cfs_aligner_core(fast)
+# Loading work.cfs_rx_ctrl(fast)
+# Loading work.cfs_synch(fast)
+# Loading work.cfs_synch_fifo(fast)
+# Loading work.cfs_tx_ctrl(fast)
+# Loading work.cfs_ctrl(fast)
+# Loading work.cfs_regs(fast)
+# Loading work.cfs_edge_detect(fast)
+# Loading work.cfs_edge_detect(fast__1)
+# Loading /home/muthub/Downloads/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# do ../../tb/sim/toggle_exclude.do
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+# coverage exclude -scope /testbench/dut/core/tx_fifo -srcfile ../../rtl/cfs_synch_fifo.v -linerange 132 -code c -comment {Waiving uncovered condition at line 128 (tx_fifo)}
+# ** UI-Msg: (vsim-4036) The 'coverage exclude' command had no effect on some/all objects because
+# no matching coverage data was found.
+# 
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+# coverage exclude -scope /testbench/dut/core/tx_fifo -srcfile ../../rtl/cfs_synch_fifo.v -linerange 156 -code c -comment {Waiving uncovered condition at line 154 (tx_fifo)}
+# ** UI-Msg: (vsim-4036) The 'coverage exclude' command had no effect on some/all objects because
+# no matching coverage data was found.
+# 
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+# coverage exclude -scope /testbench/dut/core/rx_fifo -srcfile ../../rtl/cfs_synch_fifo.v -linerange 132 -code c -comment {Waiving uncovered condition at line 128 (rx_fifo)}
+# ** UI-Msg: (vsim-4036) The 'coverage exclude' command had no effect on some/all objects because
+# no matching coverage data was found.
+# 
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+# coverage exclude -scope /testbench/dut/core/rx_ctrl -srcfile ../../rtl/cfs_rx_ctrl.v -linerange 76 -code c -comment {Waiving uncovered condition at line 128 (rx_fifo)}
+# ** UI-Msg: (vsim-4036) The 'coverage exclude' command had no effect on some/all objects because
+# no matching coverage data was found.
+# 
+# ** Warning: -comment options is supported in post simulation viewcov mode only, ignoring it.
+#  coverage save -onexit ucdb/cfs_algn_test_split_legal_combinations.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test cfs_algn_test_split_legal_combinations...
+# UVM_INFO @ 0: reporter [MAXQUITSET] '+UVM_MAX_QUIT_COUNT=20' provided on the command line is being applied.
+# ** Warning: (vsim-8556) On evaluating the expression 'binsof(ctrl_size) intersect{ value_list }' inside the select expression of Bin 'ignore_ctrl' of Cross 'all' in Covergroup instance '\/cfs_algn_pkg::cfs_algn_coverage::cover_split ', no matching bins were found. The binsof expression will result in an empty set.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'length_eq_2' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[1]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[2]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[3]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[4]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[5]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[6]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8547) After dropping the illegal, ignore or invalid values, the values list associated with fixed-size array sub bin 'length_le_10[7]' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The sub bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'length_gt_10' in Coverpoint 'length' of Covergroup instance '\/cfs_apb_pkg::cfs_apb_coverage::cover_item ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-12051) Illegal assignment in cast to class work.cfs_md_pkg::cfs_md_sequencer_base_master from class work.uvm_ext_pkg::uvm_ext_sequencer #(class work.cfs_md_pkg::cfs_md_item_drv_master)
+#    Time: 0 ns  Iteration: 32  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefe44bd05 File: ../env/cfs_algn_env.sv Line: 146
+# ** Warning: (vsim-12051) Illegal assignment in cast to class work.cfs_md_pkg::cfs_md_sequencer_base_slave from class work.uvm_ext_pkg::uvm_ext_sequencer #(class work.cfs_md_pkg::cfs_md_item_drv_slave)
+#    Time: 0 ns  Iteration: 32  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_7fefe44bd05 File: ../env/cfs_algn_env.sv Line: 147
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ---------------------------------------------------------------------------------
+# Name                          Type                                    Size  Value
+# ---------------------------------------------------------------------------------
+# uvm_test_top                  cfs_algn_test_split_legal_combinations  -     @487 
+#   env                         uvm_env                                 -     @494 
+#     agent_config              uvm_component                           -     @522 
+#     apb_agent                 cfs_apb_agent                           -     @508 
+#       agent_config            cfs_apb_agent_config                    -     @870 
+#       coverage                cfs_apb_coverage                        -     @892 
+#         port_item             uvm_analysis_imp_item                   -     @899 
+#         wrap_cover_addr_0     uvm_component                           -     @1039
+#         wrap_cover_addr_1     uvm_component                           -     @1046
+#         wrap_cover_rd_data_0  uvm_component                           -     @1067
+#         wrap_cover_rd_data_1  uvm_component                           -     @1074
+#         wrap_cover_wr_data_0  uvm_component                           -     @1053
+#         wrap_cover_wr_data_1  uvm_component                           -     @1060
+#       driver                  cfs_apb_driver                          -     @907 
+#         rsp_port              uvm_analysis_port                       -     @922 
+#         seq_item_port         uvm_seq_item_pull_port                  -     @914 
+#       monitor                 cfs_apb_monitor                         -     @877 
+#         output_port           uvm_analysis_port                       -     @884 
+#       sequencer               uvm_sequencer                           -     @930 
+#         rsp_export            uvm_analysis_export                     -     @937 
+#         seq_item_export       uvm_seq_item_pull_imp                   -     @1031
+#         arbitration_queue     array                                   0     -    
+#         lock_queue            array                                   0     -    
+#         num_last_reqs         integral                                32    'd1  
+#         num_last_rsps         integral                                32    'd1  
+#     coverage                  cfs_algn_coverage                       -     @744 
+#       port_in_split_info      uvm_analysis_imp_in_split_info          -     @751 
+#     env_config                cfs_algn_env_config                     -     @501 
+#     md_rx_agent               uvm_agent                               -     @515 
+#       agent_config            uvm_component                           -     @1088
+#       coverage                uvm_component                           -     @1110
+#         port_item             uvm_analysis_imp_item                   -     @1117
+#         wrap_cover_data_0     uvm_component                           -     @1257
+#         wrap_cover_data_1     uvm_component                           -     @1264
+#       driver                  uvm_driver #(REQ,RSP)                   -     @1125
+#         rsp_port              uvm_analysis_port                       -     @1140
+#         seq_item_port         uvm_seq_item_pull_port                  -     @1132
+#       monitor                 uvm_monitor                             -     @1095
+#         output_port           uvm_analysis_port                       -     @1102
+#       sequencer               cfs_md_sequencer_base_master            -     @1148
+#         rsp_export            uvm_analysis_export                     -     @1155
+#         seq_item_export       uvm_seq_item_pull_imp                   -     @1249
+#         arbitration_queue     array                                   0     -    
+#         lock_queue            array                                   0     -    
+#         num_last_reqs         integral                                32    'd1  
+#         num_last_rsps         integral                                32    'd1  
+#     md_tx_agent               uvm_agent                               -     @533 
+#       coverage                uvm_component                           -     @1293
+#         port_item             uvm_analysis_imp_item                   -     @1300
+#         wrap_cover_data_0     uvm_component                           -     @1487
+#         wrap_cover_data_1     uvm_component                           -     @1494
+#       driver                  uvm_driver #(REQ,RSP)                   -     @1308
+#         rsp_port              uvm_analysis_port                       -     @1323
+#         seq_item_port         uvm_seq_item_pull_port                  -     @1315
+#       monitor                 uvm_monitor                             -     @1278
+#         output_port           uvm_analysis_port                       -     @1285
+#       sequencer               cfs_md_sequencer_base_slave             -     @1331
+#         pending_items         uvm_tlm_fifo #(T)                       -     @1448
+#           get_ap              uvm_analysis_port                       -     @1479
+#           get_peek_export     uvm_get_peek_imp                        -     @1463
+#           put_ap              uvm_analysis_port                       -     @1471
+#           put_export          uvm_put_imp                             -     @1455
+#         port_from_mon         uvm_analysis_imp                        -     @1440
+#         rsp_export            uvm_analysis_export                     -     @1338
+#         seq_item_export       uvm_seq_item_pull_imp                   -     @1432
+#         arbitration_queue     array                                   0     -    
+#         lock_queue            array                                   0     -    
+#         num_last_reqs         integral                                32    'd1  
+#         num_last_rsps         integral                                32    'd1  
+#     model                     cfs_algn_model                          -     @540 
+#       port_in_rx              uvm_analysis_imp_in_rx                  -     @547 
+#       port_in_tx              uvm_analysis_imp_in_tx                  -     @555 
+#       port_out_irq            uvm_analysis_port                       -     @579 
+#       port_out_rx             uvm_analysis_port                       -     @563 
+#       port_out_split_info     uvm_analysis_port                       -     @587 
+#       port_out_tx             uvm_analysis_port                       -     @571 
+#       rx_fifo                 uvm_tlm_fifo #(T)                       -     @595 
+#         get_ap                uvm_analysis_port                       -     @626 
+#         get_peek_export       uvm_get_peek_imp                        -     @610 
+#         put_ap                uvm_analysis_port                       -     @618 
+#         put_export            uvm_put_imp                             -     @602 
+#       tx_fifo                 uvm_tlm_fifo #(T)                       -     @634 
+#         get_ap                uvm_analysis_port                       -     @665 
+#         get_peek_export       uvm_get_peek_imp                        -     @649 
+#         put_ap                uvm_analysis_port                       -     @657 
+#         put_export            uvm_put_imp                             -     @641 
+#     predictor                 uvm_reg_predictor #(cfs_apb_item_mon)   -     @674 
+#       bus_in                  uvm_analysis_imp                        -     @681 
+#       reg_ap                  uvm_analysis_port                       -     @689 
+#     scoreboard                cfs_algn_scoreboard                     -     @697 
+#       port_in_agent_rx        uvm_analysis_imp_in_agent_rx            -     @728 
+#       port_in_agent_tx        uvm_analysis_imp_in_agent_tx            -     @736 
+#       port_in_model_irq       uvm_analysis_imp_in_model_irq           -     @720 
+#       port_in_model_rx        uvm_analysis_imp_in_model_rx            -     @704 
+#       port_in_model_tx        uvm_analysis_imp_in_model_tx            -     @712 
+#     virtual_sequencer         cfs_algn_virtual_sequencer              -     @759 
+#       rsp_export              uvm_analysis_export                     -     @766 
+#       seq_item_export         uvm_seq_item_pull_imp                   -     @860 
+#       arbitration_queue       array                                   0     -    
+#       lock_queue              array                                   0     -    
+#       num_last_reqs           integral                                32    'd1  
+#       num_last_rsps           integral                                32    'd1  
+# ---------------------------------------------------------------------------------
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 175: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.CTRL: value='h1 : updated value = 'h1
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 225: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [216..] data: {'hba}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 18
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 225: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [216..225] data: {'hba}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 18
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 235: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [216..225] data: {'hba}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 18
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 235: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 235: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 245: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [216..225] data: {'hba}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 255: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=ba
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 265: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [216..225] data: {'hba}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 265: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [246..265] data: {'hba}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 21
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 265: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 335: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [326..] data: {'h42, 'hfa}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 335: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [326..335] data: {'h42, 'hfa}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 345: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [326..335] data: {'h42, 'hfa}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 345: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 345: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 345: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 355: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [326..335] data: {'h42}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 355: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 365: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [326..335] data: {'hfa}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 365: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=42
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 375: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [326..335] data: {'h42}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 375: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [356..375] data: {'h42}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 385: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=fa
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 395: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [326..335] data: {'hfa}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 395: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [376..395] data: {'hfa}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 395: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 445: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [436..] data: {'h64, 'hea, 'hfc, 'h27}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 445: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [436..445] data: {'h64, 'hea, 'hfc, 'h27}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 455: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [436..445] data: {'h64, 'hea, 'hfc, 'h27}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 455: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         4---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 455: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 455: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 465: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [436..445] data: {'h64}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 465: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         3---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 465: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 475: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [436..445] data: {'hea}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 475: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 475: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 475: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=64
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 485: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 3, pushed entry: [436..445] data: {'hfc}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 485: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 485: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 2, popped entry: [436..445] data: {'h64}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 485: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [466..485] data: {'h64}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 495: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 3, pushed entry: [436..445] data: {'h27}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 495: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=ea
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 505: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 2, popped entry: [436..445] data: {'hea}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 505: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [486..505] data: {'hea}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 515: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=fc
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 525: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [436..445] data: {'hfc}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 525: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [506..525] data: {'hfc}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 535: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=27
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 545: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [436..445] data: {'h27}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 545: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [526..545] data: {'h27}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 545: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 555: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [546..] data: {'hd8}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 555: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [546..555] data: {'hd8}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 565: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [546..555] data: {'hd8}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 565: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 565: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 575: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [546..555] data: {'hd8}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 585: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=d8
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 595: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [546..555] data: {'hd8}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 595: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [576..595] data: {'hd8}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 3
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 595: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 665: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [656..] data: {'hcf}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 665: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [656..665] data: {'hcf}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 675: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [656..665] data: {'hcf}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 675: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 675: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 685: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [656..665] data: {'hcf}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 695: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=cf
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 705: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [656..665] data: {'hcf}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 705: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [686..705] data: {'hcf}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 705: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 775: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [766..] data: {'h2c, 'h36}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 775: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [766..775] data: {'h2c, 'h36}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 785: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [766..775] data: {'h2c, 'h36}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 785: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 785: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 785: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 795: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [766..775] data: {'h2c}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 795: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 805: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [766..775] data: {'h36}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 805: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=2c
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 815: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [766..775] data: {'h2c}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 815: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [796..815] data: {'h2c}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 825: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=36
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 835: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [766..775] data: {'h36}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 835: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [816..835] data: {'h36}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 835: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 885: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [876..] data: {'h2c}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 885: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [876..885] data: {'h2c}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 895: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [876..885] data: {'h2c}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 895: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 895: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 905: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [876..885] data: {'h2c}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 915: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=2c
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 925: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [876..885] data: {'h2c}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 925: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [906..925] data: {'h2c}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 925: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 1015: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.CTRL: value='h2 : updated value = 'h2
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 1065: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [1056..] data: {'h01}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 17
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1065: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [1056..1065] data: {'h01}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 17
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 1075: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [1056..1065] data: {'h01}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 17
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 1075: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 1175: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [1166..] data: {'hb7, 'hbb}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1175: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [1166..1175] data: {'hb7, 'hbb}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 1185: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [1166..1175] data: {'hb7, 'hbb}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 1185: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 1185: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 1185: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 1195: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [1056..1175] data: {'h01, 'hb7}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 1205: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=b701
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 1215: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [1056..1175] data: {'h01, 'hb7}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1215: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [1196..1215] data: {'h01, 'hb7}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 27
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 1215: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 1285: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [1276..] data: {'ha0, 'h00, 'ha3, 'h1d}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1285: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [1276..1285] data: {'ha0, 'h00, 'ha3, 'h1d}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 1295: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [1276..1285] data: {'ha0, 'h00, 'ha3, 'h1d}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 1295: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         4---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 1295: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 1295: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 1305: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [1166..1285] data: {'hbb, 'ha0}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 1305: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         3---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 1305: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         2##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 1315: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [1276..1285] data: {'h00, 'ha3}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 1315: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=a0bb
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 1325: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [1166..1285] data: {'hbb, 'ha0}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1325: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [1306..1325] data: {'hbb, 'ha0}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 1335: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=a300
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 1345: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [1276..1285] data: {'h00, 'ha3}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1345: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [1326..1345] data: {'h00, 'ha3}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 1345: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 1395: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [1386..] data: {'h5e}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1395: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [1386..1395] data: {'h5e}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 1405: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [1386..1395] data: {'h5e}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 1405: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 1405: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 1415: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [1276..1395] data: {'h1d, 'h5e}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 1425: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=5e1d
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 1435: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [1276..1395] data: {'h1d, 'h5e}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1435: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [1416..1435] data: {'h1d, 'h5e}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 1435: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 1505: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [1496..] data: {'h4b}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1505: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [1496..1505] data: {'h4b}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 1515: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [1496..1505] data: {'h4b}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 1515: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 1615: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [1606..] data: {'h8b, 'h35}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1615: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [1606..1615] data: {'h8b, 'h35}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 1625: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [1606..1615] data: {'h8b, 'h35}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 1625: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 1625: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 1625: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 1635: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [1496..1615] data: {'h4b, 'h8b}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 1645: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=8b4b
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 1655: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [1496..1615] data: {'h4b, 'h8b}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1655: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [1636..1655] data: {'h4b, 'h8b}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 20
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 1655: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 1725: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [1716..] data: {'hc9}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1725: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [1716..1725] data: {'hc9}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 1735: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [1716..1725] data: {'hc9}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 1735: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 1735: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 1745: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [1606..1725] data: {'h35, 'hc9}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 1755: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=c935
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 1765: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [1606..1725] data: {'h35, 'hc9}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1765: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [1746..1765] data: {'h35, 'hc9}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 1765: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 1865: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.CTRL: value='h4 : updated value = 'h4
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 1915: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [1906..] data: {'h51}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 18
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 1915: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [1906..1915] data: {'h51}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 18
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 1925: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [1906..1915] data: {'h51}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 18
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 1925: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 2025: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [2016..] data: {'h2d, 'h88}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2025: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [2016..2025] data: {'h2d, 'h88}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 2035: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [2016..2025] data: {'h2d, 'h88}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 2035: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 2135: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [2126..] data: {'h67, 'hed, 'hb4, 'h6d}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2135: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [2126..2135] data: {'h67, 'hed, 'hb4, 'h6d}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 2145: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [2126..2135] data: {'h67, 'hed, 'hb4, 'h6d}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 2145: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         4---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 2145: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 2145: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 2155: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [1906..2135] data: {'h51, 'h2d, 'h88, 'h67}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 2165: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=67882d51
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 2175: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [1906..2135] data: {'h51, 'h2d, 'h88, 'h67}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2175: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [2156..2175] data: {'h51, 'h2d, 'h88, 'h67}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 39
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 2175: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 2245: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [2236..] data: {'he0}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2245: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [2236..2245] data: {'he0}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 2255: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [2236..2245] data: {'he0}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 2255: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 2255: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 2265: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [2126..2245] data: {'hed, 'hb4, 'h6d, 'he0}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 2275: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=e06db4ed
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 2285: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [2126..2245] data: {'hed, 'hb4, 'h6d, 'he0}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2285: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [2266..2285] data: {'hed, 'hb4, 'h6d, 'he0}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 2285: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 2355: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [2346..] data: {'hc5}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2355: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [2346..2355] data: {'hc5}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 2365: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [2346..2355] data: {'hc5}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 2365: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 2465: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [2456..] data: {'h36, 'hf7}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2465: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [2456..2465] data: {'h36, 'hf7}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 2475: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [2456..2465] data: {'h36, 'hf7}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 2475: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 2575: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [2566..] data: {'hf2}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2575: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [2566..2575] data: {'hf2}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 2585: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [2566..2575] data: {'hf2}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 2585: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 2585: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 2595: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [2346..2575] data: {'hc5, 'h36, 'hf7, 'hf2}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 2605: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=f2f736c5
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 2615: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [2346..2575] data: {'hc5, 'h36, 'hf7, 'hf2}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2615: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [2596..2615] data: {'hc5, 'h36, 'hf7, 'hf2}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 2, prev_item_delay: 31
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 2615: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 2715: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.CTRL: value='h101 : updated value = 'h101
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 2745: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [2736..] data: {'h8b}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 16
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2745: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [2736..2745] data: {'h8b}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 16
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 2755: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [2736..2745] data: {'h8b}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 16
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 2755: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 2755: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 2765: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [2736..2745] data: {'h8b}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 2775: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=8b00
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 2785: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [2736..2745] data: {'h8b}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2785: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [2766..2785] data: {'h8b}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 15
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 2785: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 2855: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [2846..] data: {'h22, 'h4a}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2855: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [2846..2855] data: {'h22, 'h4a}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 2865: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [2846..2855] data: {'h22, 'h4a}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 2865: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 2865: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 2865: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 2875: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [2846..2855] data: {'h22}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 2875: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 2885: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [2846..2855] data: {'h4a}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 2885: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=2200
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 2895: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [2846..2855] data: {'h22}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2895: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [2876..2895] data: {'h22}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 2905: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=4a00
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 2915: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [2846..2855] data: {'h4a}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2915: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [2896..2915] data: {'h4a}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 2915: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 2965: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [2956..] data: {'h96, 'he5, 'h4a, 'h1a}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 2965: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [2956..2965] data: {'h96, 'he5, 'h4a, 'h1a}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 2975: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [2956..2965] data: {'h96, 'he5, 'h4a, 'h1a}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 2975: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         4---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 2975: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 2975: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 2985: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [2956..2965] data: {'h96}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 2985: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         3---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 2985: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 2995: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [2956..2965] data: {'he5}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 2995: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 2995: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 2995: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=9600
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3005: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 3, pushed entry: [2956..2965] data: {'h4a}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3005: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3005: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 2, popped entry: [2956..2965] data: {'h96}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3005: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [2986..3005] data: {'h96}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3015: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 3, pushed entry: [2956..2965] data: {'h1a}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3015: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=e500
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3025: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 2, popped entry: [2956..2965] data: {'he5}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3025: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3006..3025] data: {'he5}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3035: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=4a00
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3045: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [2956..2965] data: {'h4a}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3045: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3026..3045] data: {'h4a}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3055: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=1a00
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3065: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [2956..2965] data: {'h1a}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3065: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3046..3065] data: {'h1a}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 3065: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 3075: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [3066..] data: {'hbd}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3075: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [3066..3075] data: {'hbd}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 3085: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [3066..3075] data: {'hbd}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3085: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 3085: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3095: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [3066..3075] data: {'hbd}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3105: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=bd00
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3115: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [3066..3075] data: {'hbd}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3115: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3096..3115] data: {'hbd}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 3
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 3115: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 3185: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [3176..] data: {'h61}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3185: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [3176..3185] data: {'h61}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 3195: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [3176..3185] data: {'h61}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3195: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 3195: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3205: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [3176..3185] data: {'h61}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3215: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=6100
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3225: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [3176..3185] data: {'h61}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3225: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3206..3225] data: {'h61}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 3225: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 3295: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [3286..] data: {'hbd, 'h57}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3295: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [3286..3295] data: {'hbd, 'h57}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 3305: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [3286..3295] data: {'hbd, 'h57}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 3305: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3305: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 3305: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3315: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [3286..3295] data: {'hbd}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3315: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3325: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [3286..3295] data: {'h57}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3325: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=bd00
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3335: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [3286..3295] data: {'hbd}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3335: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3316..3335] data: {'hbd}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3345: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=5700
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3355: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [3286..3295] data: {'h57}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3355: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3336..3355] data: {'h57}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 3355: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 3405: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [3396..] data: {'hb4}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3405: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [3396..3405] data: {'hb4}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 3415: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [3396..3405] data: {'hb4}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3415: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 3415: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3425: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [3396..3405] data: {'hb4}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3435: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=b400
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3445: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [3396..3405] data: {'hb4}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3445: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3426..3445] data: {'hb4}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 3445: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 3565: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.CTRL: value='h201 : updated value = 'h201
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 3615: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [3606..] data: {'h19}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 20
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3615: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [3606..3615] data: {'h19}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 20
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 3625: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [3606..3615] data: {'h19}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 20
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3625: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 3625: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3635: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [3606..3615] data: {'h19}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3645: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=190000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3655: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [3606..3615] data: {'h19}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3655: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3636..3655] data: {'h19}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 19
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 3655: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 3725: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [3716..] data: {'hfe, 'haf}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3725: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [3716..3725] data: {'hfe, 'haf}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 3735: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [3716..3725] data: {'hfe, 'haf}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 3735: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3735: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 3735: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3745: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [3716..3725] data: {'hfe}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3745: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3755: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [3716..3725] data: {'haf}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3755: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=fe0000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3765: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [3716..3725] data: {'hfe}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3765: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3746..3765] data: {'hfe}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3775: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=af0000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3785: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [3716..3725] data: {'haf}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3785: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3766..3785] data: {'haf}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 3785: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 3835: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [3826..] data: {'hf8, 'hdc, 'h1c, 'h9c}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3835: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [3826..3835] data: {'hf8, 'hdc, 'h1c, 'h9c}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 3845: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [3826..3835] data: {'hf8, 'hdc, 'h1c, 'h9c}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 3845: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         4---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3845: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 3845: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3855: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [3826..3835] data: {'hf8}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 3855: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         3---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3855: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3865: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [3826..3835] data: {'hdc}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 3865: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3865: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3865: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=f80000
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3875: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 3, pushed entry: [3826..3835] data: {'h1c}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3875: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3875: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 2, popped entry: [3826..3835] data: {'hf8}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3875: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3856..3875] data: {'hf8}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3885: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 3, pushed entry: [3826..3835] data: {'h9c}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3885: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=dc0000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3895: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 2, popped entry: [3826..3835] data: {'hdc}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3895: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3876..3895] data: {'hdc}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3905: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=1c0000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3915: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [3826..3835] data: {'h1c}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3915: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3896..3915] data: {'h1c}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3925: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=9c0000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3935: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [3826..3835] data: {'h9c}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3935: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3916..3935] data: {'h9c}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 3935: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 3945: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [3936..] data: {'he9}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3945: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [3936..3945] data: {'he9}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 3955: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [3936..3945] data: {'he9}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 3955: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 3955: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 3965: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [3936..3945] data: {'he9}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 3975: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=e90000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 3985: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [3936..3945] data: {'he9}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 3985: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [3966..3985] data: {'he9}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 3
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 3985: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 4055: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [4046..] data: {'hd6}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4055: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [4046..4055] data: {'hd6}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 4065: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [4046..4055] data: {'hd6}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 4065: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 4065: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 4075: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [4046..4055] data: {'hd6}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 4085: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=d60000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 4095: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [4046..4055] data: {'hd6}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4095: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [4076..4095] data: {'hd6}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 4095: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 4165: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [4156..] data: {'h1b, 'hc0}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4165: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [4156..4165] data: {'h1b, 'hc0}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 4175: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [4156..4165] data: {'h1b, 'hc0}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 4175: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 4175: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 4175: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 4185: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [4156..4165] data: {'h1b}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 4185: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 4195: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [4156..4165] data: {'hc0}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 4195: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=1b0000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 4205: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [4156..4165] data: {'h1b}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4205: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [4186..4205] data: {'h1b}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 4215: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=c00000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 4225: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [4156..4165] data: {'hc0}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4225: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [4206..4225] data: {'hc0}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 4225: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 4275: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [4266..] data: {'h14}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4275: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [4266..4275] data: {'h14}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 4285: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [4266..4275] data: {'h14}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 4285: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 4285: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 4295: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [4266..4275] data: {'h14}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 4305: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=140000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 4315: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [4266..4275] data: {'h14}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4315: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [4296..4315] data: {'h14}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 4315: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 4425: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.CTRL: value='h202 : updated value = 'h202
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 4465: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [4456..] data: {'hd1}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 18
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4465: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [4456..4465] data: {'hd1}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 18
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 4475: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [4456..4465] data: {'hd1}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 18
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 4475: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 4575: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [4566..] data: {'hcb, 'he9}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4575: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [4566..4575] data: {'hcb, 'he9}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 4585: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [4566..4575] data: {'hcb, 'he9}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 4585: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 4585: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 4585: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 4595: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [4456..4575] data: {'hd1, 'hcb}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 4605: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=cbd10000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 4615: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [4456..4575] data: {'hd1, 'hcb}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4615: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [4596..4615] data: {'hd1, 'hcb}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 28
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 4615: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 4685: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [4676..] data: {'h53, 'hc0, 'h8e, 'h6e}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4685: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [4676..4685] data: {'h53, 'hc0, 'h8e, 'h6e}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 4695: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [4676..4685] data: {'h53, 'hc0, 'h8e, 'h6e}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 4695: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         4---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 4695: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 4695: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 4705: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [4566..4685] data: {'he9, 'h53}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 4705: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         3---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 4705: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         2##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 4715: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [4676..4685] data: {'hc0, 'h8e}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 4715: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=53e90000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 4725: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [4566..4685] data: {'he9, 'h53}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4725: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [4706..4725] data: {'he9, 'h53}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 4735: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=8ec00000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 4745: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [4676..4685] data: {'hc0, 'h8e}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4745: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [4726..4745] data: {'hc0, 'h8e}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 4745: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 4795: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [4786..] data: {'hd5}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4795: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [4786..4795] data: {'hd5}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 4805: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [4786..4795] data: {'hd5}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 4805: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 4805: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 4815: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [4676..4795] data: {'h6e, 'hd5}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 4825: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=d56e0000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 4835: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [4676..4795] data: {'h6e, 'hd5}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4835: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [4816..4835] data: {'h6e, 'hd5}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 4835: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 4905: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [4896..] data: {'hb3}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 4905: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [4896..4905] data: {'hb3}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 4915: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [4896..4905] data: {'hb3}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 4915: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 5015: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [5006..] data: {'hfc, 'hc2}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5015: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [5006..5015] data: {'hfc, 'hc2}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 5025: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [5006..5015] data: {'hfc, 'hc2}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 5025: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5025: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 5025: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5035: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [4896..5015] data: {'hb3, 'hfc}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5045: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=fcb30000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5055: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [4896..5015] data: {'hb3, 'hfc}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5055: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5036..5055] data: {'hb3, 'hfc}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 20
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 5055: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 5125: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [5116..] data: {'h85}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5125: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [5116..5125] data: {'h85}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 5135: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [5116..5125] data: {'h85}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5135: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 5135: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5145: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [5006..5125] data: {'hc2, 'h85}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5155: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=85c20000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5165: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [5006..5125] data: {'hc2, 'h85}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5165: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5146..5165] data: {'hc2, 'h85}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 5165: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(218) @ 5295: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register reg_block.CTRL: value='h301 : updated value = 'h301
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 5325: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [5316..] data: {'h1e}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 19
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5325: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [5316..5325] data: {'h1e}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 19
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 5335: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [5316..5325] data: {'h1e}, size: 1, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 19
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5335: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 5335: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5345: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [5316..5325] data: {'h1e}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5355: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=1e000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5365: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [5316..5325] data: {'h1e}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5365: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5346..5365] data: {'h1e}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 18
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 5365: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 5435: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [5426..] data: {'h19, 'h1d}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5435: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [5426..5435] data: {'h19, 'h1d}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 5445: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [5426..5435] data: {'h19, 'h1d}, size: 2, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 5445: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5445: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 5445: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5455: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [5426..5435] data: {'h19}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5455: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5465: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [5426..5435] data: {'h1d}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5465: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=19000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5475: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [5426..5435] data: {'h19}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5475: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5456..5475] data: {'h19}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5485: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=1d000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5495: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [5426..5435] data: {'h1d}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5495: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5476..5495] data: {'h1d}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 5495: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 5545: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [5536..] data: {'h37, 'h0f, 'h7a, 'hc3}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5545: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [5536..5545] data: {'h37, 'h0f, 'h7a, 'hc3}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 5555: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [5536..5545] data: {'h37, 'h0f, 'h7a, 'hc3}, size: 4, offset: 0, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 5555: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         4---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5555: uvm_test_top.env.model [DEBUG1] md_offset:         0, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 5555: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5565: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [5536..5545] data: {'h37}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 5565: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         3---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5565: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5575: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [5536..5545] data: {'h0f}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 5575: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5575: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5575: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=37000000
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5585: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 3, pushed entry: [5536..5545] data: {'h7a}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5585: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5585: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 2, popped entry: [5536..5545] data: {'h37}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5585: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5566..5585] data: {'h37}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5595: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 3, pushed entry: [5536..5545] data: {'hc3}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5595: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=f000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5605: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 2, popped entry: [5536..5545] data: {'h0f}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5605: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5586..5605] data: {'h0f}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5615: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=7a000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5625: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [5536..5545] data: {'h7a}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5625: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5606..5625] data: {'h7a}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5635: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=c3000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5645: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [5536..5545] data: {'hc3}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5645: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5626..5645] data: {'hc3}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 5645: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 5655: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [5646..] data: {'hd6}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5655: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [5646..5655] data: {'hd6}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 5665: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [5646..5655] data: {'hd6}, size: 1, offset: 1, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5665: uvm_test_top.env.model [DEBUG1] md_offset:         1, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 5665: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5675: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [5646..5655] data: {'hd6}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5685: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=d6000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5695: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [5646..5655] data: {'hd6}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5695: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5676..5695] data: {'hd6}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 3
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 5695: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 5765: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [5756..] data: {'he0}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5765: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [5756..5765] data: {'he0}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 5775: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [5756..5765] data: {'he0}, size: 1, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5775: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 5775: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5785: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [5756..5765] data: {'he0}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5795: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=0 | VALID=1| ERROR=0 | DATA=e0000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5805: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [5756..5765] data: {'he0}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5805: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5786..5805] data: {'he0}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 5805: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 5875: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [5866..] data: {'h9e, 'h79}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5875: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [5866..5875] data: {'h9e, 'h79}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 5885: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [5866..5875] data: {'h9e, 'h79}, size: 2, offset: 2, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(879) @ 5885: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         2---------------------------------------------------------
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5885: uvm_test_top.env.model [DEBUG1] md_offset:         2, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 5885: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5895: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [5866..5875] data: {'h9e}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5895: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 5905: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 2, pushed entry: [5866..5875] data: {'h79}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5905: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=9e000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5915: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 1, popped entry: [5866..5875] data: {'h9e}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5915: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5896..5915] data: {'h9e}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 9
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 5925: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=79000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 5935: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [5866..5875] data: {'h79}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5935: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [5916..5935] data: {'h79}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 0
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 5935: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(551) @ 5985: uvm_test_top.env.model [DEBUG] RX FIFO push - new level: 1, pushed entry: [5976..] data: {'hd2}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 5985: uvm_test_top.env.md_rx_agent.monitor [ITEM_END] Monitored item: [5976..5985] data: {'hd2}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(765) @ 5995: uvm_test_top.env.model [RX_FIFO] RX FIFO pop - new level: 0, popped entry: [5976..5985] data: {'hd2}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 1, prev_item_delay: 10
+# UVM_INFO ../model/cfs_algn_model.sv(855) @ 5995: uvm_test_top.env.model [DEBUG1] md_offset:         3, md_size:         1##########################################################
+# UVM_INFO ../model/cfs_algn_model.sv(266) @ 5995: uvm_test_top.env.model [RX_FIFO] RX FIFO became empty - reg_block.IRQEN.RX_FIFO_EMPTY: 0
+# UVM_INFO ../model/cfs_algn_model.sv(780) @ 6005: uvm_test_top.env.model [TX_FIFO] TX FIFO push - new level: 1, pushed entry: [5976..5985] data: {'hd2}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_driver_slave.sv(68) @ 6015: uvm_test_top.env.md_tx_agent.driver [HANDSHAKE] Driving READY=1 | VALID=1| ERROR=0 | DATA=d2000000
+# UVM_INFO ../model/cfs_algn_model.sv(795) @ 6025: uvm_test_top.env.model [TX_FIFO] TX FIFO pop - new level: 0, popped entry: [5976..5985] data: {'hd2}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 0, prev_item_delay: 0
+# UVM_INFO ../agent_md/cfs_md_monitor.sv(88) @ 6025: uvm_test_top.env.md_tx_agent.monitor [ITEM_END] Monitored item: [6006..6025] data: {'hd2}, size: 1, offset: 3, response: CFS_MD_OKAY, length: 2, prev_item_delay: 7
+# UVM_INFO ../model/cfs_algn_model.sv(320) @ 6025: uvm_test_top.env.model [TX_FIFO] TX FIFO became empty - reg_block.IRQEN.TX_FIFO_EMPTY: 0
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 6185: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# Quit count :     0 of    20
+# ** Report counts by severity
+# UVM_INFO :  594
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [DEBUG]    49
+# [DEBUG1]    92
+# [HANDSHAKE]    63
+# [ITEM_END]   112
+# [MAXQUITSET]     1
+# [Questa UVM]     2
+# [REG_PREDICT]     7
+# [RNTST]     1
+# [RX_FIFO]    98
+# [TEST_DONE]     1
+# [TX_FIFO]   167
+# [UVMTOP]     1
+# ** Note: $finish    : /home/muthub/Downloads/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 6185 ns  Iteration: 54  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 05:37:31 on Apr 13,2026, Elapsed time: 0:-59:-57
+# Errors: 1, Warnings: 17

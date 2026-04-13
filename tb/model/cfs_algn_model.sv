@@ -936,9 +936,13 @@ int tx_lvl;
     cfs_md_item_mon item;
 
     forever begin
-      pop_from_tx_fifo(item);
+//      tx_complete.wait_trigger();     // wait for DUT send
 
-      port_out_tx.write(item);
+//      wait(tx_fifo.size() > 0);     // ensure data exists
+        
+      pop_from_tx_fifo(item);        // pop correct item
+
+      port_out_tx.write(item);        // send to scoreboard
 
       tx_complete.wait_trigger();
     end

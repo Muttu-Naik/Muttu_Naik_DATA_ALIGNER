@@ -43,6 +43,7 @@ class cfs_md_driver_slave #(
   `uvm_info("ITEM_START", $sformatf("Driving \"%0s\": %0s",item.get_full_name(), item.convert2string()), UVM_LOW)
 
   // Default value
+  vif.ready <= 0;
   vif.err <= 0;
 
   @(posedge vif.clk);
@@ -50,30 +51,62 @@ class cfs_md_driver_slave #(
   while(vif.valid !== 1)
     @(posedge vif.clk);
 
-  `uvm_info("DEBUGG", "VALID IS HIGH" ,UVM_NONE)
+    //added delay 
+/*    if (item.ready_delay > 0)
+        repeat (item.ready_delay)
+            @(posedge vif.clk);
+*/
 
   // Assert ready when valid transaction is present
-   vif.ready <= item.ready_at_end;
- //vif.ready <= 1;  
-    vif.err <= bit'(item.response);
- //   vif.err <= 0;    
+  // vif.ready <= item.ready_at_end;
+     vif.ready <= 1;  
+     vif.err <= bit'(item.response);
+ //  vif.err <= 0;    
 
   // Drive err during active transfer
-/*do begin
-  if (vif.valid && vif.ready)
-    vif.err <= bit'(item.response);
-  else
-    vif.err <= 0;
 
-  @(posedge vif.clk);
-end while (vif.valid === 1);*/
-
+  `uvm_info("HANDSHAKE", $sformatf(
+  "Driving READY=%0b | VALID=%0b| ERROR=%0b | DATA=%0h",
+  item.ready_at_end, vif.valid, vif.err, vif.data), UVM_NONE)
     
   // Cleanup
-  vif.ready <= item.ready_at_end;
-    //vif.ready <= 1;    
+  //vif.ready <= item.ready_at_end;
+    vif.ready <= 1;    
     vif.err   <= 0;
 endtask
+
+/*
+ //Task which drives one single item on the bus
+  protected virtual task drive_transaction(cfs_md_item_drv_slave item);
+
+    cfs_md_vif vif = agent_config.get_vif();
+
+    `uvm_info("ITEM_START", $sformatf("Driving \"%0s\": %0s", item.get_full_name(),
+                                      item.convert2string()), UVM_LOW)
+
+    if (vif.valid !== 1) begin
+      `uvm_error(
+          "ALGORITHM_ISSUE",
+          $sformatf(
+              "Trying to drive a slave item when there is no item started by the master - item: %0s",
+              item.convert2string()))
+    end
+
+    vif.ready <= 0;
+
+    for (int i = 0; i < item.length; i++) begin
+      @(posedge vif.clk);
+    end
+
+    vif.ready <= 1;
+    vif.err   <= bit'(item.response);
+
+    @(posedge vif.clk);
+
+    vif.ready <= item.ready_at_end;
+    vif.err   <= 0;
+  endtask
+  */
 
   // Reset handling
   virtual function void handle_reset(uvm_phase phase);
@@ -89,5 +122,6 @@ endtask
 
 endclass
 
-`endif // CFS_MD_DRIVER_SLAVE_SV*/
+`endif // CFS_MD_DRIVER_SLAVE_SV
+
 

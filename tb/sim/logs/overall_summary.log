@@ -1,9 +1,0 @@
-
-========== PASS 1 of 1 ==========
-==== REGRESSION ERROR SUMMARY (Pass 1) ====
-sim_cfs_algn_apb_tests_3_1_1_396054508.log: Errors=0, Fatals=0
-sim_cfs_algn_apb_tests_3_1_3_53448799.log: Errors=0, Fatals=0
-sim_cfs_algn_apb_tests_3_1_4_817684584.log: Errors=0, Fatals=0
-sim_cfs_algn_apb_tests_3_1_5_510558174.log: Errors=0, Fatals=0
-sim_cfs_algn_md_tests_3_2_1_496572125.log: Errors=0, Fatals=0
-sim_cfs_algn_md_tests_3_2_2_55306305.log: Errors=0, Fatals=0

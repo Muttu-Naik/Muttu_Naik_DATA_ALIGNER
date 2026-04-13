@@ -18,11 +18,10 @@ class cfs_algn_md_tests_3_2_2 extends cfs_algn_test_base;
   virtual task run_phase(uvm_phase phase);
 
     cfs_md_sequence_slave_response_forever resp_seq; 
+    cfs_algn_virtual_sequence_reg_config cfg_seq;    
 
     cfs_md_sequence_tx_ready_block  tx_ready_block_seq;
-    
-    cfs_algn_virtual_sequence_reg_config cfg_seq;
-    
+     
     cfs_algn_virtual_sequence_rx_crt legal_seq;
     cfs_algn_virtual_sequence_rx_err illegal_seq;
 

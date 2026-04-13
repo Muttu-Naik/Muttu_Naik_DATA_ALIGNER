@@ -15,7 +15,12 @@ class cfs_md_item_drv_slave extends cfs_md_item_drv;
   //Value of 'ready' signal at the end of the MD item
   rand bit ready_at_end;
 
+  //added for cov
+   rand int unsigned ready_delay;
+
   constraint length_default {soft length <= 5;}
+  //added for cov
+  constraint delay_c { ready_delay inside {[0:15]}; }
 
   `uvm_object_utils(cfs_md_item_drv_slave)
 
@@ -24,8 +29,8 @@ class cfs_md_item_drv_slave extends cfs_md_item_drv;
   endfunction
 
   virtual function string convert2string();
-    return $sformatf("length: %0d, response: %0s, ready_at_end: %0d", length, response.name(),
-                     ready_at_end);
+    return $sformatf("length: %0d, ready_delay: %0d, response: %0s, ready_at_end: %0d",
+                     length, ready_delay, response.name(), ready_at_end);
   endfunction
 
 endclass

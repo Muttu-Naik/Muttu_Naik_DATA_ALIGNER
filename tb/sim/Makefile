@@ -1,89 +1,139 @@
-# Makefile for compiling and running simulation using Mentor QuestaSim
+#===============================================================================
+# Mentor QuestaSim UVM Regression Makefile
+#===============================================================================
 
-# File locations
-RTL_DIR = ../../rtl
-TB_TOP_DIR = ../top
+###############################################################################
+# FILE LOCATIONS
+###############################################################################
+RTL_DIR      := ../../rtl
+TB_TOP_DIR   := ../top
 
-# File list
-TOP_SRCS = $(RTL_DIR)/design.sv $(TB_TOP_DIR)/testbench.sv
-#########################################################
-# # Test and UVM options                                #
-# # Tests available                                     #
-# To run a specific test use the syntac below           #
-# make run TESTNAME=<cfs_algn_md_tests_random_traffic>
-#
-# Use the below command to run with gui and view waveforms
-# make grun TESTNAME=<cfs_algn_md_tests_random_traffic>  #
-#########################################################
-# ###########################
-#cfs_algn_apb_tests_mapped_unmapped
-#cfs_algn_md_tests_random_traffic
-#cfs_algn_md_tests_cnt_drop
-#cfs_algn_apb_tests_3_1_1
-#cfs_algn_apb_tests_3_1_2
-#cfs_algn_apb_tests_3_1_3
-#cfs_algn_apb_tests_3_1_4
-#cfs_algn_apb_tests_3_1_5
-#cfs_algn_md_tests_3_2_1
-# ###########################
-# Default test if none specified
-DEFAULT_TEST = cfs_algn_apb_tests_mapped_unmapped
+###############################################################################
+# SOURCE FILES
+###############################################################################
+TOP_SRCS := \
+	$(RTL_DIR)/design.sv \
+	$(TB_TOP_DIR)/testbench.sv
+
+###############################################################################
+# TEST CONFIGURATION
+###############################################################################
+DEFAULT_TEST := cfs_algn_apb_tests_mapped_unmapped
 TESTNAME ?= $(DEFAULT_TEST)
 
-# UVM options with dynamic test name and random seed
-UVM_ARGS = +UVM_TESTNAME=$(TESTNAME) +UVM_MAX_QUIT_COUNT=20 +access +rw -f messages.f -sv_seed 3179955932 
-TOGGLE_DO=../../tb/sim/toggle_exclude.do
+###############################################################################
+# DIRECTORIES
+###############################################################################
+WORKLIB   := work
+LOG_DIR   := logs
+UCDB_DIR  := ucdb
 
-# Simulation libraries
-WORKLIB = work
+###############################################################################
+# FILES
+###############################################################################
+COMP_LOG   := $(LOG_DIR)/compile.log
+SIM_LOG    := $(LOG_DIR)/$(TESTNAME).sim.log
+TRANSCRIPT := $(LOG_DIR)/$(TESTNAME).transcript
+UCDB_FILE  := $(UCDB_DIR)/$(TESTNAME).ucdb
 
-# Log files
-COMP_LOG = compile.log
-SIM_LOG = sim.log
-TRANSCRIPT = transcript
+###############################################################################
+# SIMULATION OPTIONS
+###############################################################################
+TOGGLE_DO := ../../tb/sim/toggle_exclude.do
 
-UCDB_DIR = ./ucdb
-UCDB_FILE = $(UCDB_DIR)/$(TESTNAME).ucdb
+UVM_ARGS := \
+	+UVM_TESTNAME=$(TESTNAME) \
+	+UVM_MAX_QUIT_COUNT=20 \
+	+access+rw \
+	-f messages.f \
+	-sv_seed RANDOM \
+	+cover \
+	+UVM_COVERAGE=ALL
 
-# Default target
+###############################################################################
+# DEFAULT TARGET
+###############################################################################
 all: clean comp run
 
-# Compile target
+###############################################################################
+# COMPILE ONLY ONCE
+###############################################################################
 comp:
-	@echo "[Compiling...]" | tee $(COMP_LOG)
-	@rm -rf $(WORKLIB)
-	@vlib $(WORKLIB) | tee -a $(COMP_LOG)
-	@vmap $(WORKLIB) $(WORKLIB) | tee -a $(COMP_LOG)
-	@vlog -sv -cover bcest -work $(WORKLIB) $(TOP_SRCS) +acc +define+QUESTA +incdir+$(RTL_DIR) +incdir+$(TB_TOP_DIR) | tee -a $(COMP_LOG) | tee -a $(TRANSCRIPT)
-
-# Run simulation (command-line mode)
-run: comp
+	@echo "[Compiling...]"
+	@mkdir -p $(LOG_DIR)
 	@mkdir -p $(UCDB_DIR)
-	@echo "[Running Simulation with TESTNAME=$(TESTNAME)...]" | tee $(SIM_LOG)
+	@rm -rf $(WORKLIB)
+	@vlib $(WORKLIB)
+	@vmap $(WORKLIB) $(WORKLIB)
+	@vlog -sv -cover bcest -work $(WORKLIB) \
+		$(TOP_SRCS) \
+		+acc \
+		+define+QUESTA \
+		+incdir+$(RTL_DIR) \
+		+incdir+$(TB_TOP_DIR) \
+		2>&1 | tee $(COMP_LOG)
+
+###############################################################################
+# NORMAL RUN (Compile + Simulate)
+###############################################################################
+run: comp run_only
+
+###############################################################################
+# RUN ONLY (USED BY REGRESSION SCRIPT)
+###############################################################################
+run_only:
+	@mkdir -p $(LOG_DIR)
+	@mkdir -p $(UCDB_DIR)
+	@echo "[Running Simulation: $(TESTNAME)]"
 	@vsim -coverage -c work.testbench $(UVM_ARGS) \
-	 -do "do $(TOGGLE_DO); coverage save -onexit $(UCDB_FILE); run -all; quit;" \
-	 | tee -a $(SIM_LOG) | tee -a $(TRANSCRIPT)
+		-do "do $(TOGGLE_DO); coverage save -onexit $(UCDB_FILE); run -all; quit -f;" \
+		-l $(SIM_LOG)
 
-grun:
-	@echo "[Running Simulation with TESTNAME=$(TESTNAME) in GUI mode...]" | tee $(SIM_LOG)
-	@vsim -coverage work.testbench $(UVM_ARGS) -do " log -r /*; do wave.do; run -all; quit" -l my_sim.log | tee -a $(SIM_LOG) | tee -a $(TRANSCRIPT)
+###############################################################################
+# GUI RUN
+###############################################################################
+grun: comp
+	@mkdir -p $(LOG_DIR)
+	@echo "[Running GUI Simulation: $(TESTNAME)]"
+	@vsim -coverage work.testbench $(UVM_ARGS) \
+		-do "log -r /*; do wave.do; run -all;" \
+		-l $(SIM_LOG)
 
+###############################################################################
+# CLEAN
+###############################################################################
 clean:
-	@clear
 	@echo "[Cleaning simulation files...]"
-	@rm -rf $(WORKLIB) $(COMP_LOG) $(SIM_LOG) $(TRANSCRIPT) vsim.wlf
-	@rm -rf $(UCDB_DIR)/*.ucdb $(UCDB_DIR)/merged.ucdb $(UCDB_DIR)/coverage_report
-	
+	@rm -rf $(WORKLIB)
+	@rm -rf $(LOG_DIR)
+	@rm -rf $(UCDB_DIR)
+	@rm -rf vsim.wlf transcript
+	@rm -f modelsim.ini
+
+###############################################################################
+# REGRESSION
+###############################################################################
 regress:
-	./regressions/run_regression.sh $(RUNS)
+	@./regressions/run_regression.sh $(RUNS)
 
-# Merge all .ucdb files in UCDB_DIR
+###############################################################################
+# COVERAGE REPORT
+###############################################################################
 report:
-	@echo "[Merging UCDB files into $(UCDB_DIR)/merged.ucdb]"
-	@vcover merge $(UCDB_DIR)/merged.ucdb $(shell find $(UCDB_DIR) -name '*.ucdb' ! -name 'merged.ucdb')
-	@echo "[Generating HTML coverage report in $(UCDB_DIR)/coverage_report]"
-	@vcover report -html -output $(UCDB_DIR)/coverage_report -details -verbose $(UCDB_DIR)/merged.ucdb
-	@echo "[Opening HTML report with Firefox...]"
-	@firefox $(UCDB_DIR)/coverage_report/index.html >/dev/null 2>&1 || echo "Please open $(UCDB_DIR)/coverage_report/index.html manually."
+	@echo "[Merging UCDB Files...]"
+	@vcover merge $(UCDB_DIR)/merged.ucdb \
+		$$(find $(UCDB_DIR) -name '*.ucdb' ! -name 'merged.ucdb')
 
-.PHONY: all comp run grun clean regress cmerge report 
+	@echo "[Generating HTML Coverage Report...]"
+	@vcover report -html \
+		-output $(UCDB_DIR)/coverage_report \
+		-details -verbose \
+		$(UCDB_DIR)/merged.ucdb
+
+	@echo "[Opening Coverage Report...]"
+	@firefox $(UCDB_DIR)/coverage_report/index.html >/dev/null 2>&1 || true
+
+###############################################################################
+# PHONY TARGETS
+###############################################################################
+.PHONY: all comp run run_only grun clean regress report

@@ -62,7 +62,7 @@ module cfs_regs #(
 );
 
   localparam ADDR_CTRL = 'h0000;
-//******  localparam ADDR_STATUS = 'h0008;
+//  localparam ADDR_STATUS = 'h0008;
   localparam ADDR_STATUS = 'h000c;
   localparam ADDR_IRQEN = 'h00f0;
   localparam ADDR_IRQ = 'h00f4;
